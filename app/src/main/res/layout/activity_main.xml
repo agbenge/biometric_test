@@ -10,11 +10,15 @@
         android:id="@+id/fingerPrintImage"
         android:layout_width="200dp"
         android:layout_height="240dp"
+        android:src="?android:attr/fingerprintAuthDrawable"
+        android:tintMode="add"
         app:layout_constraintBottom_toTopOf="@+id/buttonRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fingerprint" />
+        app:srcCompat="?android:attr/fingerprintAuthDrawable"
+        app:tint="#090909"
+        tools:srcCompat="?android:attr/fingerprintAuthDrawable" />
 
     <Button
         android:id="@+id/buttonRegister"

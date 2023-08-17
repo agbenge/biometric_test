@@ -12,7 +12,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.hardware.usb.UsbDevice;
@@ -137,7 +136,9 @@ String res="Capture  ImageQuality: "+imageQuality +"\nmImageDPI: "+mImageDPI
         filter.addAction(UsbManager.ACTION_USB_DEVICE_ATTACHED);
         filter.addAction(UsbManager.ACTION_USB_DEVICE_DETACHED);
         filter.addAction(ACTION_USB_PERMISSION); //USB Permissions
-        sgfplib = new JSGFPLib(this,(UsbManager) getSystemService(Context.USB_SERVICE));
+       //lastest imp of sdk sgfplib = new JSGFPLib(this,(UsbManager) getSystemService(Context.USB_SERVICE));
+
+        sgfplib = new JSGFPLib((UsbManager) getSystemService(Context.USB_SERVICE));
 
         bSecuGenDeviceOpened = false;
         usbPermissionRequested = false;
